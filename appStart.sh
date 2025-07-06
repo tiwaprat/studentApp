@@ -5,7 +5,7 @@ cd "$(dirname "$0")" || exit 1
 export BUILD_ID=dontKillMe
 
 # Try to get PID of process using port 9090; suppress non-zero exit with '|| true'
-PID=$(lsof -ti:9090 || true)
+PID=$(lsof -ti:8080 || true)
 
 if [ -n "$PID" ]; then
     echo "Process found on port 9090 with PID: $PID"
@@ -16,6 +16,6 @@ else
 fi
 
 # Start new instance in background and detach
-nohup java -jar target/studentapp-1.0.0.jar --server.port=9090 &
+nohup java -jar target/studentapp-1.0.0.jar --server.port=8080 &
 disown
 
