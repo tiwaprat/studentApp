@@ -28,6 +28,13 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+    <!--- To access AWS secret manager -->
+    <dependency>
+      <groupId>io.awspring.cloud</groupId>
+      <artifactId>spring-cloud-starter-aws-secrets-manager-config</artifactId>
+      <version>3.0.1</version> <!-- or latest -->
+    </dependency>
+       
 
     <!-- Spring JDBC -->
     <dependency>
