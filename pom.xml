@@ -29,18 +29,19 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <!--- To access AWS secret manager -->
-    <dependency>
-      <groupId>io.awspring.cloud</groupId>
-      <artifactId>spring-cloud-starter-aws-secrets-manager-config</artifactId>
-      <version>3.0.1</version> <!-- or latest -->
-    </dependency>
-       
-
+   
     <!-- Spring JDBC -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-jdbc</artifactId>
     </dependency>
+    <!---secrete manager -->
+           <dependency>
+    <groupId>io.awspring.cloud</groupId>
+    <artifactId>spring-cloud-starter-aws-secrets-manager-config</artifactId>
+    <version>3.0.1</version>
+  </dependency>
+</dependencies>
 
     <!-- MySQL Driver -->
     <dependency>
@@ -71,5 +72,12 @@
       </plugin>
     </plugins>
   </build>
-
+         
+<repositories>
+  <repository>
+    <id>spring-releases</id>
+    <url>https://repo.spring.io/release</url>
+  </repository>
+</repositories>
+         
 </project>
